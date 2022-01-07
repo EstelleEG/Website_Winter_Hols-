@@ -1,0 +1,279 @@
+/* GENERAL*/
+
+*{       /* whole doc */
+margin:0;
+padding:0;
+}
+
+/* HEADER NAV *******************************************************/
+.logo{        /* logo is child of nav */
+width:90px;
+
+}
+
+nav{         /* is parent of logo and tabs a*/
+  width:100%;
+  height:150px;
+  background-color: aquamarine;
+  display:flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap:wrap;
+  box-shadow: 5px 8px 15px;
+  position:fixed;
+  
+}
+
+.tabs>a{      /* a are children of tabs*/
+text-decoration: none;
+font-size: 1.5rem;
+padding:10px;
+color:rgb(82, 80, 80);
+display:block;
+margin-right: 20px;
+}
+
+.tabs{      /* is child of nav and parent of the a*/
+display: flex;
+align-items: center;
+}
+
+/* parent of header is body */
+/* parent of nav is header */
+
+.iconsSM{      /* icons are children of nav*/
+  display: flex;
+  flex-wrap: nowrap;
+  }
+
+.iconsSM i{      /* icons i are children of iconsSM*/
+    padding: 8px;
+    font-size: 1.5rem;
+    color: blue;
+    }
+
+
+    /* SECTION*******************************************************/
+section{
+      width:100%;
+      height:600px;
+      background-image: url("https://www.telegraph.co.uk/multimedia/archive/03384/71258239_YOGA_GIRL_3384848b.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      text-align: center;
+      display:flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+h1{
+      font-size: 60px;
+      margin-bottom: 20px;
+    }
+
+p{
+      font-size: 25px;
+    }
+
+button{
+      width:200px;
+      background-color: aquamarine;
+      color: black;
+      text-decoration: none;
+      font-size: 16px;
+      border-radius: 10px;
+      padding:10px;
+      margin-top: 30px;
+      cursor: pointer;
+      border:none;
+    }
+
+
+
+/* MAIN *******************************************************/
+  
+main{
+display: flex;
+width: 100%;
+background-image: url("https://images.unsplash.com/photo-1528818955841-a7f1425131b5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8c3RhcnJ5JTIwc2t5fGVufDB8fDB8fA%3D%3D&w=1000&q=80");
+background-repeat: no-repeat;
+background-size: cover;
+justify-content: center;
+}
+
+
+form{
+text-align: center;
+margin: 40px 0px 40px 0px;
+background-color: aquamarine;
+padding: 20px;
+width: 50%;
+border-radius: 10px;
+box-shadow: 5px 5px 10px 0px;
+border:none;
+}
+
+input{
+  width:200px;
+  height:30px;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  border:none;
+}
+
+.msg{
+  height:160px;
+  width:360px;
+}
+
+.btnsend {
+  cursor: pointer;
+  font-size: 20px;
+  padding: 10px 0px 30px 0px;
+  background-color: rgb(41, 146, 146);
+  color:white;
+}
+
+
+
+/* FOOTER************************************/
+
+footer {
+  display:flex;      /* align items horizontally */
+  flex-direction: row;
+  justify-content:space-around;
+  align-items: center;
+  background-color: rgb(228, 227, 227);
+  box-shadow: 0px 0px 5px 0px;
+
+}
+
+footer img{
+width: 90px;
+margin: 25px 0px 25px 25px;
+}
+
+footer p{
+  font-size: 18px;
+  }
+
+.iconsSMfooter i{
+color:blue;
+padding: 8px;
+font-size: 1.5rem;
+}
+
+.iconsSMfooter{     
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+iframe {
+  border: 10px solid blue;
+  width: 100%;
+}
+
+
+
+
+
+/* BURGER MENU ICON ***************************/
+
+.nav-toggle{
+  display:none;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* MEDIA QUERIES  */
+/* MEDIA QUERIES  */
+/* MEDIA QUERIES  */
+
+/*for screens of 768 px and less*/
+@media only screen and (max-width: 768px) {
+  .iconsSM {
+    display:none;
+  }
+  section h1{
+    font-size: 40px;
+  }
+  section p{
+    font-size: 18px;
+    margin: 0px 10px 0px 10px;
+  }
+  button{
+    width:130px;
+  }
+  .msg{
+    width:220px;
+  }
+  .btnsend{
+    width:220px;
+  }
+
+  footer p{
+    font-size: 13px;
+  }
+
+  .iconsSMfooter i{
+    font-size: 1.2rem;
+  }
+/* BURGER MENU DROPDOWN */
+  .nav-toggle{
+    display:block;
+    background: transparent;
+    border-color: transparent;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-right: -15px;
+    margin-top: 10px;
+  }
+
+  .tabs{
+    display:none;     /*i hide the tabs a, i see them only when i ll click on the burger icon*/
+    width:100%;
+    text-align: center;
+  }
+
+  .tabs a{
+    background-color: aquamarine;
+    width:100%;
+  }
+
+ .tabs a:hover{
+  color:white;
+  background-color:rgb(35, 110, 223);
+ }
+
+  nav{
+    display:flex;
+    height:auto;     /* covers blanks in between tabs*/
+    padding-top: 25px;
+    justify-content: space-between;
+  }
+
+  .showtabs{        /* will tell JS to use it when I ll need to display the tabs a after clicking on the burger menu icon, no need to add this class in html*/
+    display:block;
+  }
+
+  .logo {
+    margin-left: 30px;
+  }
+
+}
+
+
+
+
+
+
+
+
